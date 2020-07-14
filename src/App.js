@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import SinglePlayer from './contents/SinglePlayer'
-import MainPage from './contents/MainPage'
+import SinglePlayer from './components/SinglePlayer'
+import MainPage from './components/MainPage'
 import './App.css';
 
 function App() {

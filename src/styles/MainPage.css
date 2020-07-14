@@ -1,7 +1,9 @@
 .body-mainpage{
     background-color: rgb(177, 169, 169);
-    margin: auto;
+    height: 200%;
+    margin: 0;
     padding: 10px;
     align-items: center;
+    align-content: center;
     text-align: center;
 }

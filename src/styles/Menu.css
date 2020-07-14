@@ -1,7 +1,10 @@
 .boton{
-    margin: auto;
-    height: 50px;
-    width: 20px;
+    margin: 10px;
+    height: 30px;
+    width: 120px;
+    background-color: rgb(188, 223, 229);
+    border-radius: 10px;
+    border-color: black;
 }
 
 
@@ -10,7 +13,7 @@
     padding: 30px;
     border-color: black;
     border: 1px;
-    background-color: rgba(95, 78, 78, 0.747);
+    background-color: rgba(116, 97, 97, 0.747);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
@@ -19,15 +22,21 @@
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 0px solid #000000;
-    width: 30%;
-    display: flex;
+    width: 250px;
+    height: 300px;
+    display: flexbox;
     align-items: center;
-    justify-content: start;
+    align-content: center;
+    /* position: relative;
+    left: 500px;
+    top: 100px */
+
+   
 }
 
 .body-menu{
     
-    height: 400px;
-    width: 200px;
+    height: 40px;
+    width: 20px;
 
 }
