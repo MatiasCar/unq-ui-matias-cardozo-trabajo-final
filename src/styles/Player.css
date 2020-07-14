@@ -1,0 +1,9 @@
+.imagen{
+    background-color: rgb(100, 235, 95);
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    
+}

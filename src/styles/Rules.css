@@ -1,0 +1,20 @@
+
+.img-reglas{
+    margin: auto;
+    padding: initial;
+    display: flex;
+}
+
+.boton-volver{
+    padding: initial;
+    margin: auto;
+    display: flex;
+    
+    width: 30px;
+    height: 30px;
+    
+}
+
+.titulo{
+    text-align: center;
+}

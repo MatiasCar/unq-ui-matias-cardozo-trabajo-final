@@ -1,9 +1,13 @@
 .body-mainpage{
-    background-color: rgb(177, 169, 169);
-    height: 200%;
-    margin: 0;
-    padding: 10px;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-hand-drawn-cartoon-green-landscape-background-sceneryspringgreengrasslandblue-skywhite-cloudsforestsunlightlandscape-image_88108.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vmin;
     align-items: center;
     align-content: center;
     text-align: center;
+    margin: auto;
+    padding: 10px;
 }

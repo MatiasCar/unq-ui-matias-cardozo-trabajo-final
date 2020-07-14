@@ -2,7 +2,8 @@ import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import SinglePlayer from './components/SinglePlayer'
 import MainPage from './components/MainPage'
-import './App.css';
+import Rules from './components/Rules'
+
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={MainPage}/>
           <Route exact path="/single-player" component={SinglePlayer}/>
+          <Route exact path="/rules" component={Rules}/>
         </Switch>
       </BrowserRouter>
       

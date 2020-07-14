@@ -1,13 +1,14 @@
 import React from 'react'
 
-import OpcionesParaJugar from '../components/OpcionesParaJugar'
+import Player from '../components/Player'
 
 
 function SinglePlayer(){
 
     return(
         <div>
-            <OpcionesParaJugar />
+            <Player/>
+            <Player/>
         </div>
     )
 }

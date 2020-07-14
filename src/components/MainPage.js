@@ -10,7 +10,7 @@ function MainPage(){
     return(
 
         <div className="body-mainpage">
-            <h1>main page</h1>
+            <h1>Piedra, Papel, Tijera, Lagarto, Spock Game</h1>
             <Menu/>
         </div>
 
