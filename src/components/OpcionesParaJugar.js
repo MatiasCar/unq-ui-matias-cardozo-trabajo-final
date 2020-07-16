@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/OpcionesParaJugar.css'
-import {Link} from 'react-router-dom'
+import {useState} from 'react'
 
 import Piedra from '../icons/piedra.svg'
 import Papel from '../icons/papel.svg'
@@ -8,17 +8,22 @@ import Tijeras from '../icons/tijeras.svg'
 import Lagarto from '../icons/lagarto.svg'
 import Spock from '../icons/spock.svg'
 
-function OpcionesParaJugar(){
+function OpcionesParaJugar({consultaEleccion}){
+
+
+
+    const pasarEleccion= (eleccion)=>{
+        consultaEleccion(eleccion);
+    }
 
     return(
         <div className="iconos-menu">
-                <Link to="/">
-                    <img className="iconos" src={Piedra} alt="icono 1" />
-                </Link>
-            <img className="iconos" src={Papel} alt="icono 2"/>
-            <img className="iconos" src={Tijeras} alt="icono 3"/>
-            <img className="iconos" src={Lagarto} alt="icono 4"/>
-            <img className="iconos" src={Spock} alt="icono 5"/>
+            <img className="iconos" src={Piedra} alt="Piedra" onClick={() => pasarEleccion('Piedra')}/>
+            <img className="iconos" src={Papel} alt="Papel" onClick={() => pasarEleccion('Papel')}/>
+            <img className="iconos" src={Tijeras} alt="Tijeras" onClick={() => pasarEleccion('Tijeras')}/>
+            <img className="iconos" src={Lagarto} alt="Lagarto" onClick={() => pasarEleccion('Lagarto')}/>
+            <img className="iconos" src={Spock} alt="Spock" onClick={() => pasarEleccion('Spock')}/>
+            
         </div>
     )
 }
