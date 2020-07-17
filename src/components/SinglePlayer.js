@@ -1,7 +1,16 @@
 import React, { useState } from 'react'
 
+//importo iconos 
+import Piedra from '../icons/piedra.svg'
+import Papel from '../icons/papel.svg'
+import Tijeras from '../icons/tijeras.svg'
+import Lagarto from '../icons/lagarto.svg'
+import Spock from '../icons/spock.svg'
+
+
 import Player from '../components/Player'
 
+import '../styles/SinglePlayer.css'
 
 function SinglePlayer(){
 
@@ -11,8 +20,10 @@ function SinglePlayer(){
     const [juegoTerminado, setJuegoTerminado]= useState(false);
 
     //CPU
+    const iconosPosibles= [Piedra, Papel, Tijeras, Lagarto, Spock];
+    const [iconoRandom, setIconoRandom]= useState('');
     const eleccionesPosibles = ['Piedra', 'Papel', 'Tijera', 'Lagarto', 'Spock'];
-    const [eleccionCpu,setEleccionCPU] = useState('');
+    
     const [ganadasCPU, setGanadasCPU]= useState(0);
 
     const [ganadorDeRonda, setGanadorDeRonda]= useState('');
@@ -104,8 +115,11 @@ function SinglePlayer(){
     function jugar(opcJug1){
         if(!juegoTerminado && opcJug1 !==''){
             //Seteo una eleccion random para el cpu
-            var eleccionRandom = eleccionesPosibles[Math.floor(Math.random() * eleccionesPosibles.length)]
-            setEleccionCPU(eleccionRandom);
+            var valorRandom = Math.floor(Math.random() * eleccionesPosibles.length);
+            var eleccionRandom = eleccionesPosibles[valorRandom];
+            
+            setIconoRandom(iconosPosibles[valorRandom])
+            
             
             var ganador =verificarGanador(opcJug1, eleccionRandom);
             if (ganador ==='jug1'){
@@ -130,26 +144,35 @@ function SinglePlayer(){
 
     function reset(){
         setEleccionjugador('');
-        setEleccionCPU('');
+        setIconoRandom(null);
         setJuegoTerminado(false);
         setGanadorDeRonda('');
     }
 
 
     const verEleccion = eleccion =>{
-        setEleccionjugador(eleccion)
+        if(!juegoTerminado){
+            setEleccionjugador(eleccion)
+        }
     }
 
     return(
-        <div>
+        <div className="body-singleplayer">
             <Player verEleccion={verEleccion}/>
-            <button className="boton-jugar" type="button" onClick={() => jugar(eleccionJugador)}>Jugar</button>
-            <button className="boton-jugar" type="button" onClick={()=>reset()} >Jugar de Nuevo</button>
-            <h1>Eleccion del Jugador: {eleccionJugador}</h1>
-            <h1>El CPU eligió : {eleccionCpu}</h1>
-            <h2>Resultado final: {ganadorDeRonda}</h2>
-            <h3>Ganadas CPU: {ganadasCPU}</h3>
-            <h3>Ganadas Jugador: {ganadasJugador}</h3>
+            <div className="datos-jugador">
+                <h3>Ganadas: {ganadasJugador}</h3>
+                <h2>Elegiste: {eleccionJugador}</h2>
+            </div>
+            <div className="botones-jugar">
+                <button className="boton" type="button" onClick={() => jugar(eleccionJugador)}>Jugar</button>
+                <button className="boton" type="button" onClick={()=>reset()} >Jugar de Nuevo</button>
+            </div>
+            <div className="datos-cpu">
+                <h2 className="datos-cpu-texto">El CPU eligió : </h2>
+                <h3 className="datos-cpu-texto">Ganadas CPU: {ganadasCPU}</h3>
+                <img className="iconoSeleccionCpu" src={iconoRandom} alt='' />
+            </div>
+                <h1 className="resultado">Resultado final: {ganadorDeRonda}</h1>
             
         </div>
     )

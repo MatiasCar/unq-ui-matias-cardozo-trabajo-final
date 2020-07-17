@@ -1,15 +1,21 @@
 .iconos-menu{
-    background-color: rgb(157, 157, 207);
+    background-color: rgb(187, 187, 233);
+    border-color: rgba(187, 187, 233, 0.623);
+    border-style: groove;
     border-radius: 10px;
     align-items: center;
     width: 500px;
     height: 100px;
-    padding: 0;
-    margin: 30px;
+    padding: 0px;
+    margin: 0px;
+    position:relative;
+    left: 50px;
+    bottom: 5px;
 }
 
 .iconos{
     padding: 10px;
     width: 80px;
     height: 100px;
+    
 }
