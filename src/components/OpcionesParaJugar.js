@@ -14,6 +14,7 @@ function OpcionesParaJugar({consultaEleccion}){
 
     const pasarEleccion= (eleccion)=>{
         consultaEleccion(eleccion);
+        
     }
 
     return(
