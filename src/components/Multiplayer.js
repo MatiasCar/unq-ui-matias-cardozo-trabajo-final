@@ -10,11 +10,12 @@ function Multiplayer(){
     //Datos jugador 1
     const [ganadasJug1, setGanadasJug1]= useState(0);
     const [eleccionJug1, setEleccionJug1]= useState('');
+    const [eleccionParaMostrarJ1, setEleccionParaMostrarJ1]= useState('')
 
     //Datos jugador 2
     const [ganadasJug2, setGanadasJug2]= useState(0);
     const [eleccionJug2, setEleccionJug2]= useState('');
-
+    const [eleccionParaMostrarJ2, setEleccionParaMostrarJ2]= useState('')
 
     const [juegoTerminado, setJuegoTerminado]= useState(false);
     const [ganadorDeRonda, setGanadorDeRonda]= useState('');
@@ -49,6 +50,8 @@ function Multiplayer(){
                 setGanadorDeRonda('Empate')
            }
            setJuegoTerminado(true)
+           setEleccionParaMostrarJ1(eleccionJug1)
+           setEleccionParaMostrarJ2(eleccionJug2)
         }
     }
 
@@ -57,7 +60,9 @@ function Multiplayer(){
         setEleccionJug1('');
         setEleccionJug2('');
         setJuegoTerminado(false);
-    }
+        setEleccionParaMostrarJ1('')
+           setEleccionParaMostrarJ2('')
+     }
     
 
     return(
@@ -68,7 +73,7 @@ function Multiplayer(){
                 <div className="datos-jugador">
                     <h3>Jugador 1</h3>
                     <h3>Ganadas: {ganadasJug1}</h3>
-                    <h2>Elegiste: {eleccionJug1}</h2>
+                    <h2>Elegiste: {eleccionParaMostrarJ1}</h2>
                 </div> 
             </div>
 
@@ -77,7 +82,7 @@ function Multiplayer(){
                 <div className="datos-jugador">
                 <h3>Jugador 2</h3>
                     <h3>Ganadas: {ganadasJug2}</h3>
-                    <h2>Elegiste: {eleccionJug2}</h2>   
+                    <h2>Elegiste: {eleccionParaMostrarJ2}</h2>   
                 </div>
             </div>
             
