@@ -23,3 +23,17 @@
     border-style: double;
     border-color: rgb(5, 136, 81);
 }
+
+.btn-volver-menu-princ{
+    padding: initial;
+    margin: auto;
+    display: flex;
+    
+    width: 30px;
+    height: 30px;
+    background-color: rgb(195, 245, 188);
+    border-radius: 50px 50px 50px 50px;
+    position: relative;
+    bottom: 700px;
+    left: 500px;
+}

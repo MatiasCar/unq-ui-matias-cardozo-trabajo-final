@@ -11,10 +11,10 @@ function Rules(){
         <div className="body-reglas">
 
             <h1 className="titulo">Reglas del juego</h1>
-            <img src={Reglas} alt="reglas del juego" className="img-reglas"/>
             <Link to="/">
                 <img src={Volver} alt ="icono de volver" className="boton-volver"/>
             </Link>
+            <img src={Reglas} alt="reglas del juego" className="img-reglas"/>
             
     </div>
     )

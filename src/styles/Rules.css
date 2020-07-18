@@ -1,8 +1,12 @@
 
 .img-reglas{
-    margin: auto;
-    padding: initial;
+    margin: 30px;
+    padding: 0px;
     display: flex;
+    height: 600px;
+    position: relative;
+    left: 370px;
+    bottom: 80px;
 }
 
 .boton-volver{
@@ -12,9 +16,32 @@
     
     width: 30px;
     height: 30px;
-    
+
+    background-color: white;
+    border-radius: 50px 50px 50px 50px;
+    position: relative;
+    left: 400px;    
+    bottom: 50px;
 }
 
 .titulo{
+    width: 400px;
     text-align: center;
+    position: relative;
+    left: 500px;
+    top: 30px;
+}
+
+.body-reglas{
+    padding: 10px;
+    background-color: rgba(145,232,66);
+    min-height: 600px;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 79%, rgba(145,232,66,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(210,255,82,1)), color-stop(79%, rgba(145,232,66,1)), color-stop(100%, rgba(145,232,66,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 79%, rgba(145,232,66,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 79%, rgba(145,232,66,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 79%, rgba(145,232,66,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 79%, rgba(145,232,66,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842', GradientType=1 );
+    
 }

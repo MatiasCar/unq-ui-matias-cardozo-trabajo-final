@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
+import {Link} from 'react-router-dom'
 
 //importo iconos 
 import Piedra from '../icons/piedra.svg'
@@ -6,9 +7,11 @@ import Papel from '../icons/papel.svg'
 import Tijeras from '../icons/tijeras.svg'
 import Lagarto from '../icons/lagarto.svg'
 import Spock from '../icons/spock.svg'
+import Volver from '../icons/cancelar.svg'
 
 
 import Player from '../components/Player'
+import Verificador from '../Verificador'
 
 import '../styles/SinglePlayer.css'
 
@@ -29,89 +32,7 @@ function SinglePlayer(){
     const [ganadorDeRonda, setGanadorDeRonda]= useState('');
     
 
-    function verificarGanador(opcJug1 , opcCPU){
-
-        var rta= '';
-
-        //Casos para eleccion 'Piedra' del jugador
-        if(opcJug1 === 'Piedra'){
-            //gana contra:
-            if(opcCPU === 'Tijera' || opcCPU === 'Lagarto'){
-                rta = 'jug1'
-            }
-            //pierde contra:
-            if(opcCPU === 'Papel' || opcCPU === 'Spock'){
-                rta = 'jug2'
-            }
-            if(opcCPU === 'Piedra'){
-                rta = 'empate'
-            }
-            return rta;
-        }
-
-        //Casos para eleccion 'Papel' del jugador
-        if(opcJug1 === 'Papel'){
-            //gana contra:
-            if(opcCPU === 'Piedra' || opcCPU === 'Spock'){
-                rta = 'jug1'
-            }
-            //pierde contra:
-            if(opcCPU === 'Tijera' || opcCPU === 'Lagarto'){
-                rta = 'jug2'
-            }
-            if(opcCPU === 'Papel'){
-                rta = 'empate'
-            }
-            return rta;
-        }
-        //Casos para eleccion 'Tijera' del jugador
-        if(opcJug1 === 'Tijera'){
-            //gana contra:
-            if(opcCPU === 'Papel' || opcCPU === 'Lagarto'){
-                rta = 'jug1'
-            }
-            //pierde contra:
-            if(opcCPU === 'Piedra' || opcCPU === 'Spock'){
-                rta = 'jug2'
-            }
-            if(opcCPU === 'Tijera'){
-                rta = 'empate'
-            }
-            return rta;
-        }
-        //Casos para eleccion 'Lagarto' del jugador
-        if(opcJug1 === 'Lagarto'){
-            //gana contra:
-            if(opcCPU === 'Papel' || opcCPU === 'Spock'){
-                rta = 'jug1'
-            }
-            //pierde contra:
-            if(opcCPU === 'Piedra' || opcCPU === 'Tijera'){
-                rta = 'jug2'
-            }
-            if(opcCPU === 'Lagarto'){
-                rta = 'empate'
-            }
-            return rta;
-        }
-        //Casos para eleccion 'Spock' del jugador
-        if(opcJug1 === 'Spock'){
-            //gana contra:
-            if(opcCPU === 'Tijera' || opcCPU === 'Piedra'){
-                rta = 'jug1'
-            }
-            //pierde contra:
-            if(opcCPU === 'Lagarto' || opcCPU === 'Papel'){
-                rta = 'jug2'
-            }
-            if(opcCPU === 'Spock'){
-                rta = 'empate'
-            }
-            return rta;
-        }
- 
-    }
-
+    
     function jugar(opcJug1){
         if(!juegoTerminado && opcJug1 !==''){
             //Seteo una eleccion random para el cpu
@@ -121,7 +42,7 @@ function SinglePlayer(){
             setIconoRandom(iconosPosibles[valorRandom])
             
             
-            var ganador =verificarGanador(opcJug1, eleccionRandom);
+            var ganador =Verificador(opcJug1, eleccionRandom);
             if (ganador ==='jug1'){
                 setGanadasJugador(ganadasJugador+1)
                 setGanadorDeRonda('Ganador Jugador 1')
@@ -136,9 +57,7 @@ function SinglePlayer(){
             console.log(ganador)
             setJuegoTerminado(true)
         }
-        else{
-            //tirar error
-        }
+        
         
     }
 
@@ -173,6 +92,9 @@ function SinglePlayer(){
                 <img className="iconoSeleccionCpu" src={iconoRandom} alt='' />
             </div>
                 <h1 className="resultado">Resultado final: {ganadorDeRonda}</h1>
+                <Link to="/">
+                <img src={Volver} alt ="Volver a Menu principal" className="btn-volver-menu-princ"/>
+                </Link>
             
         </div>
     )

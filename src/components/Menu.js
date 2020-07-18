@@ -13,7 +13,9 @@ function Menu(){
                 <Link to="/single-player">
                     <button className="boton" type="button">1 Jugador</button> 
                 </Link>
-                <button className="boton" type="button">2 Jugadores</button>
+                <Link to="/multiplayer">
+                    <button className="boton" type="button">2 Jugadores</button>
+                </Link>
                 <Link to="/rules">
                     <button className="boton" type="button">Reglas</button>
                 </Link>
