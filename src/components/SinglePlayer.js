@@ -13,7 +13,7 @@ import Volver from '../icons/cancelar.svg'
 import Player from '../components/Player'
 import Verificador from '../Verificador'
 
-import '../styles/SinglePlayer.css'
+import '../styles/PartidasStyles.css'
 
 function SinglePlayer(){
 
@@ -54,7 +54,7 @@ function SinglePlayer(){
             if(ganador === 'empate'){
                 setGanadorDeRonda('Empate')
             }
-            console.log(ganador)
+            
             setJuegoTerminado(true)
         }
         
@@ -69,7 +69,7 @@ function SinglePlayer(){
     }
 
 
-    const verEleccion = eleccion =>{
+    const verEleccionJ1 = eleccion =>{
         if(!juegoTerminado){
             setEleccionjugador(eleccion)
         }
@@ -77,10 +77,11 @@ function SinglePlayer(){
 
     return(
         <div className="body-singleplayer">
-            <Player verEleccion={verEleccion}/>
+            <Player verEleccionJ1={verEleccionJ1}/>
             <div className="datos-jugador">
-                <h3>Ganadas: {ganadasJugador}</h3>
-                <h2>Elegiste: {eleccionJugador}</h2>
+                <h3>Jugador 1</h3>
+                <h3 className="text-jug1">Ganadas: {ganadasJugador}</h3>
+                <h2 className="text-jug1">Elegiste: {eleccionJugador}</h2>
             </div>
             <div className="botones-jugar">
                 <button className="boton" type="button" onClick={() => jugar(eleccionJugador)}>Jugar</button>

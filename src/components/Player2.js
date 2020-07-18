@@ -1,24 +1,24 @@
 import React from 'react'
 import '../styles/Player.css'
-import OpcionesParaJugar from '../components/OpcionesParaJugar'
-import IconoJugBlue from '../icons/player-blue.svg'
+import OpcionesParaJugar from './OpcionesParaJugar'
+import IconoJugRed from '../icons/player-red.svg'
 
 
-function Player({verEleccionJ1}){
+function Player({verEleccionJ2}){
 
 
     const consultaEleccion = eleccion => {
         
-        verEleccionJ1(eleccion)
+        verEleccionJ2(eleccion)
     }
 
 
 
     return(
 
-        <div className="player">
+        <div className="player2">
             <div className="imagen">
-                <img src={IconoJugBlue} alt="imagen jugador" />
+                <img src={IconoJugRed} alt="imagen jugador" />
             </div>
             <OpcionesParaJugar consultaEleccion={consultaEleccion}/>
             

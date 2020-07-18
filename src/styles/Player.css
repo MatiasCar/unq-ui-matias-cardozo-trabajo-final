@@ -24,6 +24,17 @@
     border-color: rgb(5, 136, 81);
 }
 
+.player2{
+    border-radius: 30px;
+    margin: 15px;
+    width: 600px;
+    height: 270px;
+    background-color: rgba(233, 176, 181, 0.664);
+    border: 15px;
+    border-style: double;
+    border-color: rgb(158, 12, 12);
+}
+
 .btn-volver-menu-princ{
     padding: initial;
     margin: auto;
@@ -35,5 +46,11 @@
     border-radius: 50px 50px 50px 50px;
     position: relative;
     bottom: 700px;
+    left: 500px;
+}
+
+.botones-jugar-mult{
+    position: relative;
+    bottom: 400px;
     left: 500px;
 }

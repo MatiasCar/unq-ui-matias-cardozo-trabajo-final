@@ -24,6 +24,12 @@
     left: 500px;
 }
 
+.resultado-final{
+    position: relative;
+    bottom: 550px;
+    left: 500px;
+}
+
 .iconoSeleccionCpu{
     width: 80px;
     height: 80px;
@@ -53,4 +59,21 @@
     position : relative;
     top: 30px;
     left: 20px;
+}
+
+
+.jugador2{
+    position: relative;
+    bottom: 445px;
+    left: 650px;
+}
+
+.body-multiplayer{
+    min-width: 100%;
+}
+
+
+.text-jug1{
+    font-family: monospace;
+    
 }
