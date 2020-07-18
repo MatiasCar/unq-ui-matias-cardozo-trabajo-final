@@ -70,10 +70,34 @@
 
 .body-multiplayer{
     min-width: 100%;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/455/678/non_2x/seamless-green-landscape-for-game-ui-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
 }
 
 
 .text-jug1{
     font-family: monospace;
     
+}
+
+
+.btn-volver-mp{
+    padding: initial;
+    margin: auto;
+    display: flex;
+    
+    width: 30px;
+    height: 30px;
+
+    background-color: white;
+    border-radius: 50px 50px 50px 50px;
+    position: relative;
+    left: 400px;    
+    bottom: 50px;
+
+    position: relative;
+    bottom: 500px;
+    left: 600px;
 }

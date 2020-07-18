@@ -1,8 +1,12 @@
 import React,{useState} from 'react'
+import {Link} from 'react-router-dom'
+
 import Player from '../components/Player'
 import Player2 from '../components/Player2'
+
 import '../styles/PartidasStyles.css'
 import Verificador from '../Verificador'
+import Volver from '../icons/cancelar.svg'
 
 
 function Multiplayer(){
@@ -92,7 +96,9 @@ function Multiplayer(){
             </div>
 
             <h2 className="resultado-final">Resultado final: {ganadorDeRonda}</h2>
-
+            <Link to="/">
+                <img src={Volver} alt ="Volver a Menu principal" className="btn-volver-mp"/>
+            </Link>
         </div>
     );
 }

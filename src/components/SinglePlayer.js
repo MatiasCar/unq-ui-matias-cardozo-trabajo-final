@@ -94,7 +94,7 @@ function SinglePlayer(){
             </div>
                 <h1 className="resultado">Resultado final: {ganadorDeRonda}</h1>
                 <Link to="/">
-                <img src={Volver} alt ="Volver a Menu principal" className="btn-volver-menu-princ"/>
+                    <img src={Volver} alt ="Volver a Menu principal" className="btn-volver-menu-princ"/>
                 </Link>
             
         </div>

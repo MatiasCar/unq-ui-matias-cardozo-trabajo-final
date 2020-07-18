@@ -17,5 +17,12 @@
     padding: 10px;
     width: 80px;
     height: 100px;
+
     
+}
+
+.iconos:hover{
+    height: 70px;
+    border-radius: 200px 200px 200px 200px;
+    background-color: lightyellow;
 }
