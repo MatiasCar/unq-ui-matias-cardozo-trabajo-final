@@ -1,8 +1,8 @@
 .datos-jugador{
     position: relative;
-    bottom: 250px;
+    bottom: 300px;
     left: 250px;
-    width: 200px;
+    width: 250px;
     
 }
 
@@ -25,9 +25,17 @@
 }
 
 .resultado-final{
+    width: 450px;
     position: relative;
-    bottom: 550px;
-    left: 500px;
+    bottom: 700px;
+    left: 450px;
+}
+
+.botones-jugar-mult{
+    width: 300px;
+    position: relative;
+    bottom: 570px;
+   
 }
 
 .iconoSeleccionCpu{
@@ -61,10 +69,15 @@
     left: 20px;
 }
 
+.jugador1{
+    position: relative;
+    bottom: 15px;
+}
+
 
 .jugador2{
     position: relative;
-    bottom: 445px;
+    bottom: 500px;
     left: 650px;
 }
 

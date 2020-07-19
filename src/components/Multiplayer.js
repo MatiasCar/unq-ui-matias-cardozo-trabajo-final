@@ -14,12 +14,14 @@ function Multiplayer(){
     //Datos jugador 1
     const [ganadasJug1, setGanadasJug1]= useState(0);
     const [eleccionJug1, setEleccionJug1]= useState('');
-    const [eleccionParaMostrarJ1, setEleccionParaMostrarJ1]= useState('')
+    const [eleccionParaMostrarJ1, setEleccionParaMostrarJ1]= useState('');
+    const [confirmarSiEligioJ1, setConfirmarSiEligioJ1]= useState('No');
 
     //Datos jugador 2
     const [ganadasJug2, setGanadasJug2]= useState(0);
     const [eleccionJug2, setEleccionJug2]= useState('');
-    const [eleccionParaMostrarJ2, setEleccionParaMostrarJ2]= useState('')
+    const [eleccionParaMostrarJ2, setEleccionParaMostrarJ2]= useState('');
+    const [confirmarSiEligioJ2, setConfirmarSiEligioJ2]= useState('No');
 
     const [juegoTerminado, setJuegoTerminado]= useState(false);
     const [ganadorDeRonda, setGanadorDeRonda]= useState('');
@@ -29,12 +31,18 @@ function Multiplayer(){
     const verEleccionJ1 = eleccion =>{
         if(!juegoTerminado){
             setEleccionJug1(eleccion)
+            if(eleccionJug1!==null){
+                setConfirmarSiEligioJ1('Si')
+            }
         }
     }
 
     const verEleccionJ2 = eleccion =>{
         if(!juegoTerminado){
             setEleccionJug2(eleccion)
+            if(eleccionJug2!==null){
+                setConfirmarSiEligioJ2('Si')
+            }
         }
     }
 
@@ -65,7 +73,9 @@ function Multiplayer(){
         setEleccionJug2('');
         setJuegoTerminado(false);
         setEleccionParaMostrarJ1('')
-           setEleccionParaMostrarJ2('')
+        setEleccionParaMostrarJ2('')
+        setConfirmarSiEligioJ1('No')
+        setConfirmarSiEligioJ2('No')
      }
     
 
@@ -77,7 +87,8 @@ function Multiplayer(){
                 <div className="datos-jugador">
                     <h3>Jugador 1</h3>
                     <h3>Ganadas: {ganadasJug1}</h3>
-                    <h2>Elegiste: {eleccionParaMostrarJ1}</h2>
+                    <h4>Eligió: {confirmarSiEligioJ1}</h4>
+                    <h3>Opción elegida: {eleccionParaMostrarJ1}</h3>
                 </div> 
             </div>
 
@@ -85,8 +96,9 @@ function Multiplayer(){
                 <Player2 verEleccionJ2={verEleccionJ2}/>
                 <div className="datos-jugador">
                 <h3>Jugador 2</h3>
-                    <h3>Ganadas: {ganadasJug2}</h3>
-                    <h2>Elegiste: {eleccionParaMostrarJ2}</h2>   
+                <h3>Ganadas: {ganadasJug2}</h3>
+                <h4>Eligió: {confirmarSiEligioJ2}</h4>
+                <h3>Opcion elegida: {eleccionParaMostrarJ2}</h3>   
                 </div>
             </div>
             
