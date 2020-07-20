@@ -16,7 +16,6 @@ function verificarGanador(opcJug1 , opcCPU){
         if(opcCPU === 'Piedra'){
             rta = 'empate'
         }
-        return rta;
     }
 
     //Casos para eleccion 'Papel' del jugador
@@ -32,7 +31,6 @@ function verificarGanador(opcJug1 , opcCPU){
         if(opcCPU === 'Papel'){
             rta = 'empate'
         }
-        return rta;
     }
     //Casos para eleccion 'Tijera' del jugador
     if(opcJug1 === 'Tijera'){
@@ -47,7 +45,6 @@ function verificarGanador(opcJug1 , opcCPU){
         if(opcCPU === 'Tijera'){
             rta = 'empate'
         }
-        return rta;
     }
     //Casos para eleccion 'Lagarto' del jugador
     if(opcJug1 === 'Lagarto'){
@@ -62,7 +59,6 @@ function verificarGanador(opcJug1 , opcCPU){
         if(opcCPU === 'Lagarto'){
             rta = 'empate'
         }
-        return rta;
     }
     //Casos para eleccion 'Spock' del jugador
     if(opcJug1 === 'Spock'){
@@ -77,9 +73,10 @@ function verificarGanador(opcJug1 , opcCPU){
         if(opcCPU === 'Spock'){
             rta = 'empate'
         }
-        return rta;
     }
-
+    return rta;
 }
 
 export default verificarGanador;
+
+
