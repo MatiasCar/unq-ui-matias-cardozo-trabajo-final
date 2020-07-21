@@ -10,6 +10,8 @@ Pasos para la correcta instalación y ejecución:
 
 -   Ejecutar el comando " cd unq-ui-matias-cardozo-trabajo-final.git "
 
--   Ejecutar el comando npm start , una vez termine de ejecutarse se abrirá una pestaña de navegador.
+-   Ejecutar el comando "npm install".
+
+-   Una vez terminada la instalacion, ejecutar el comando "npm start" , acto seguido se abrirá una pestaña de navegador.
 
 -   Ya puede jugar.
